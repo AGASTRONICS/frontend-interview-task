@@ -17,7 +17,7 @@ class StrollUserSubHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          height: 100,
+          height: 90,
           child: Stack(
             children: [
               Positioned(
@@ -27,10 +27,12 @@ class StrollUserSubHeader extends StatelessWidget {
                   width: 200,
                   child: Text(
                     StrollTexts.question1,
+                    maxLines: 2,
                     style: TextStyle(
                       color: StrollColors.light,
                       fontSize: StrollSizes.lg,
                       fontWeight: FontWeight.bold,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ),
