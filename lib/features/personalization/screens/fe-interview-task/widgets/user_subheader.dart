@@ -1,6 +1,7 @@
 import 'package:feinterview/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../common/widgets/badge/name_badge.dart';
 import '../../../../../common/widgets/images/avatar.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/image_strings.dart';
@@ -44,21 +45,8 @@ class StrollUserSubHeader extends StatelessWidget {
                     Positioned(
                       top: 8,
                       left: 65,
-                      child: Container(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100.0),
-                          color: StrollColors.dark,
-                        ),
-                        child: Text(
-                          'Angelina, 28',
-                          style: TextStyle(
-                            color: StrollColors.light,
-                            fontWeight: FontWeight.w500,
-                            fontSize: StrollSizes.fontSizeXs,
-                          ),
-                        ),
+                      child: StrollNameBadge(
+                        value: 'Angelina, 28',
                       ),
                     ),
                     Row(
