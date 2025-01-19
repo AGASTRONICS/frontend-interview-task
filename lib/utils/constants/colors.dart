@@ -16,6 +16,9 @@ class StrollColors {
   static const Color light = Colors.white;
   static const Color dark = Colors.black;
 
+  // Text
+  static const Color textGrey = Colors.grey;
+
   // Gradient colors
   static Gradient linerGradient = LinearGradient(
       begin: Alignment(0.0, 0.0),
