@@ -34,6 +34,7 @@ class StrollFrontendInterviewTask extends StatelessWidget {
             '"${StrollTexts.question2}"',
             style: TextStyle(
               color: StrollColors.accent,
+              fontStyle: FontStyle.italic,
             ),
           ),
           Expanded(
