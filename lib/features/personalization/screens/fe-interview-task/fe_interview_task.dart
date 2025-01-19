@@ -1,3 +1,4 @@
+import 'package:feinterview/features/personalization/screens/fe-interview-task/widgets/answers_section.dart';
 import 'package:feinterview/features/personalization/screens/fe-interview-task/widgets/background_with_stack_text.dart';
 import 'package:feinterview/features/personalization/screens/fe-interview-task/widgets/user_subheader.dart';
 import 'package:flutter/material.dart';
@@ -15,22 +16,18 @@ class FrontendInterviewTask extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          Stack(
-            children: [
-              StrollHeaderSection(),
-              Positioned(
-                bottom: 0,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: StrollSizes.lg),
-                      child: StrollUserSubHeader(),
-                    ),
-                  ],
+          StrollHeaderSection(),
+          Positioned(
+            bottom: 0,
+            child: Column(
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: StrollSizes.lg),
+                  child: StrollUserSubHeader(),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Text(
             '"${StrollTexts.question2}"',
@@ -38,6 +35,7 @@ class FrontendInterviewTask extends StatelessWidget {
               color: StrollColors.accent,
             ),
           ),
+          StrollAnswersSection(),
         ],
       ),
     );
