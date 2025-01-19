@@ -23,13 +23,14 @@ class StrollAnswersCard extends StatelessWidget {
       onTap: onTap ?? () {},
       child: Container(
         decoration: BoxDecoration(
-            color: StrollColors.darkShadow,
-            borderRadius: BorderRadius.all(
-              Radius.circular(StrollSizes.cardRadiusMd),
-            ),
-            border: Border.all(
-              color: isActive ? StrollColors.primary : Colors.transparent,
-            )),
+          color: StrollColors.darkShadow,
+          borderRadius: BorderRadius.all(
+            Radius.circular(StrollSizes.cardRadiusMd),
+          ),
+          border: Border.all(
+            color: isActive ? StrollColors.primary : Colors.transparent,
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(StrollSizes.sm),
           child: Row(

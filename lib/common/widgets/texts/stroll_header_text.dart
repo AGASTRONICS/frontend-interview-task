@@ -32,14 +32,14 @@ class StrollHeaderText extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(width: StrollSizes.xs),
+                  SizedBox(width: StrollSizes.xs / 2),
                   InkWell(
                     onTap: () {},
                     child: Icon(
                       Icons.keyboard_arrow_down,
                       color: StrollColors.primary,
                     ),
-                  )
+                  ),
                 ],
               ),
               StrollSubHeaderText(),
