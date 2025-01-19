@@ -12,11 +12,16 @@ class StrollPngIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      assetPath,
-      fit: BoxFit.contain,
+    return Container(
+      decoration: BoxDecoration(),
       height: size,
       width: size,
+      child: Image.asset(
+        assetPath,
+        fit: BoxFit.contain,
+        height: size,
+        width: size,
+      ),
     );
   }
 }

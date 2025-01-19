@@ -8,8 +8,8 @@ import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/constants/texts.dart';
 
-class FrontendInterviewTask extends StatelessWidget {
-  const FrontendInterviewTask({super.key});
+class StrollFrontendInterviewTask extends StatelessWidget {
+  const StrollFrontendInterviewTask({super.key});
 
   @override
   Widget build(BuildContext context) {

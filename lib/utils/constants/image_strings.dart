@@ -10,4 +10,11 @@ class StrollImages {
   // -- App Icons
   static const String person = "assets/icons/person.png";
   static const String alarmClock = "assets/icons/alarm_clock.png";
+  static const String mic = "assets/icons/mic.png";
+
+  // -- Navigation Icons
+  static const String card = "assets/svgs/poker_cards.svg";
+  static const String chat = "assets/svgs/chat.svg";
+  static const String bonfire = "assets/svgs/bonfire.svg";
+  static const String user = "assets/svgs/user.svg";
 }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'app.dart';
+import 'cubit/navigation_cubit.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,6 +12,7 @@ void main() {
     MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AnswersCubit()),
+        BlocProvider(create: (context) => NavigationCubit()),
       ],
       child: StrollApp(),
     ),

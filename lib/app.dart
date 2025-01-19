@@ -1,7 +1,7 @@
 import 'package:feinterview/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 
-import 'features/personalization/screens/fe-interview-task/fe_interview_task.dart';
+import 'navigation.dart';
 
 class StrollApp extends StatelessWidget {
   const StrollApp({super.key});
@@ -15,7 +15,7 @@ class StrollApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const FrontendInterviewTask(),
+      home: const StrollNavigationMenu(),
     );
   }
 }

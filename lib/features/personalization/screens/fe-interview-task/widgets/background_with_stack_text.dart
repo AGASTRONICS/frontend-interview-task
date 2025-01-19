@@ -18,7 +18,7 @@ class StrollHeaderSection extends StatelessWidget {
         Stack(
           children: [
             Container(
-              height: StrollDeviceUtils.getScreenHeight(context) * 0.6,
+              height: StrollDeviceUtils.getScreenHeight(context) * 0.54,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(StrollImages.sunSetBackground2),
@@ -49,13 +49,14 @@ class StrollHeaderSection extends StatelessWidget {
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Container(
-                      height: 280,
+                      height: 200,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           begin: Alignment.bottomCenter,
                           end: Alignment.topCenter,
                           colors: [
                             StrollColors.dark,
+                            StrollColors.darkShadow,
                             Colors.transparent,
                           ],
                         ),

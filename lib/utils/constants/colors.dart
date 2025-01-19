@@ -15,6 +15,7 @@ class StrollColors {
   // Mode
   static const Color light = Colors.white;
   static const Color dark = Colors.black;
+  static const Color darkGrey = Color(0xE90E0E0E);
 
   // Text
   static const Color textGrey = Colors.grey;
