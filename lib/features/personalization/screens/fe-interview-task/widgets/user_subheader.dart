@@ -25,14 +25,14 @@ class StrollUserSubHeader extends StatelessWidget {
                 top: 30,
                 left: 75,
                 child: SizedBox(
-                  width: 200,
+                  width: 250,
                   child: Text(
                     StrollTexts.question1,
                     maxLines: 2,
                     style: TextStyle(
                       color: StrollColors.light,
-                      fontSize: StrollSizes.lg,
-                      fontWeight: FontWeight.bold,
+                      fontSize: StrollSizes.md + 8,
+                      fontWeight: FontWeight.w500,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),

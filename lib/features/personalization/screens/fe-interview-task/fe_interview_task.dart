@@ -23,8 +23,9 @@ class StrollFrontendInterviewTask extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: StrollSizes.lg),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: StrollSizes.md + 2,
+                  ),
                   child: StrollUserSubHeader(),
                 ),
               ],
