@@ -47,7 +47,7 @@ class StrollAvatar extends StatelessWidget {
               child: Text(
                 avatarPlaceholder!.toString()[0].toUpperCase(),
                 style: TextStyle(
-                    color: StrollColors.textGrey, fontSize: StrollSizes.md),
+                    color: StrollColors.light, fontSize: StrollSizes.md),
               ),
             ),
           );

@@ -31,23 +31,27 @@ class StrollAnswersSection extends StatelessWidget {
       ),
     ];
 
-    return BlocProvider(
-      create: (context) => AnswersCubit(),
-      child: Padding(
-        padding: const EdgeInsets.all(StrollSizes.md),
-        child: PGridLayout(
-          itemCount: answers.length,
-          mainAxisExtent: 60,
-          spacing: StrollSizes.md - 4,
-          itemBuilder: (_, index) {
-            final answer = answers[index];
-            return StrollAnswersCard(
-              answer: answer,
-              isActive: true,
-            );
-          },
-        ),
-      ),
+    return BlocBuilder<AnswersCubit, int?>(
+      builder: (context, activeIndex) {
+        return Padding(
+          padding: const EdgeInsets.all(StrollSizes.md),
+          child: PGridLayout(
+            itemCount: answers.length,
+            mainAxisExtent: 60,
+            spacing: StrollSizes.md - 4,
+            itemBuilder: (_, index) {
+              final answer = answers[index];
+              return StrollAnswersCard(
+                answer: answer,
+                isActive: activeIndex == index,
+                onTap: () {
+                  context.read<AnswersCubit>().setActiveCard(index);
+                },
+              );
+            },
+          ),
+        );
+      },
     );
   }
 }
