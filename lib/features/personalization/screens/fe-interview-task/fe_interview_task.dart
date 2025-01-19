@@ -1,4 +1,5 @@
 import 'package:feinterview/features/personalization/screens/fe-interview-task/widgets/background_with_stack_text.dart';
+import 'package:feinterview/features/personalization/screens/fe-interview-task/widgets/user_subheader.dart';
 import 'package:flutter/material.dart';
 
 class FrontendInterviewTask extends StatelessWidget {
@@ -11,7 +12,7 @@ class FrontendInterviewTask extends StatelessWidget {
       body: Stack(
         children: [
           StrollHeaderSection(),
-          // StrollUserSubHeader(),
+          StrollUserSubHeader(),
         ],
       ),
     );
