@@ -1,4 +1,3 @@
-import 'package:feinterview/utils/constants/texts.dart';
 import 'package:feinterview/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +5,7 @@ import '../../../../../common/widgets/images/avatar.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/texts.dart';
 
 class StrollUserSubHeader extends StatelessWidget {
   const StrollUserSubHeader({super.key});
@@ -13,36 +13,67 @@ class StrollUserSubHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          width: StrollDeviceUtils.getScreenWidth(context),
+          height: 100,
           child: Stack(
             children: [
-              const Positioned(
-                top: 8,
-                left: 65,
-                child: Text(
-                  'Angelina, 28',
-                  style: TextStyle(
-                    color: StrollColors.light,
-                    fontWeight: FontWeight.w500,
-                    fontSize: StrollSizes.fontSizeSm,
+              Positioned(
+                top: 30,
+                left: 75,
+                child: SizedBox(
+                  width: 200,
+                  child: Text(
+                    StrollTexts.question1,
+                    style: TextStyle(
+                      color: StrollColors.light,
+                      fontSize: StrollSizes.lg,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const StrollAvatar(
-                    assetPath: StrollImages.ladyAvatar,
-                    size: 65,
-                  ),
-                ],
+              SizedBox(
+                width: StrollDeviceUtils.getScreenWidth(context),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: 8,
+                      left: 65,
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100.0),
+                          color: StrollColors.dark,
+                        ),
+                        child: Text(
+                          'Angelina, 28',
+                          style: TextStyle(
+                            color: StrollColors.light,
+                            fontWeight: FontWeight.w500,
+                            fontSize: StrollSizes.fontSizeXs,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const StrollAvatar(
+                          assetPath: StrollImages.ladyAvatar,
+                          size: 65,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
         ),
-        Text(StrollTexts.question2)
       ],
     );
   }

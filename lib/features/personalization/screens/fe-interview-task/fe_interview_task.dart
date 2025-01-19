@@ -2,7 +2,9 @@ import 'package:feinterview/features/personalization/screens/fe-interview-task/w
 import 'package:feinterview/features/personalization/screens/fe-interview-task/widgets/user_subheader.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../../../../utils/constants/texts.dart';
 
 class FrontendInterviewTask extends StatelessWidget {
   const FrontendInterviewTask({super.key});
@@ -18,13 +20,23 @@ class FrontendInterviewTask extends StatelessWidget {
               StrollHeaderSection(),
               Positioned(
                 bottom: 0,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: StrollSizes.xl),
-                  child: StrollUserSubHeader(),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: StrollSizes.xl),
+                      child: StrollUserSubHeader(),
+                    ),
+                  ],
                 ),
               ),
             ],
+          ),
+          Text(
+            '"${StrollTexts.question2}"',
+            style: TextStyle(
+              color: StrollColors.accent,
+            ),
           ),
         ],
       ),
