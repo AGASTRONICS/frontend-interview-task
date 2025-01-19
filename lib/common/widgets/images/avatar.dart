@@ -7,7 +7,7 @@ import '../../../utils/constants/sizes.dart';
 class StrollAvatar extends StatelessWidget {
   final String assetPath;
   final double size;
-  final Color? borderColor;
+  final Color? borderColor, backgroundColor;
   final String? avatarPlaceholder;
   final VoidCallback? callback;
 
@@ -16,6 +16,7 @@ class StrollAvatar extends StatelessWidget {
     required this.assetPath,
     this.size = 24,
     this.avatarPlaceholder,
+    this.backgroundColor,
     this.borderColor = StrollColors.darkShadow,
     this.callback,
   });
@@ -38,6 +39,7 @@ class StrollAvatar extends StatelessWidget {
             height: size,
             width: size,
             decoration: BoxDecoration(
+              color: backgroundColor,
               borderRadius: BorderRadius.all(Radius.circular(100.0)),
               border: Border.all(color: StrollColors.textGrey),
             ),

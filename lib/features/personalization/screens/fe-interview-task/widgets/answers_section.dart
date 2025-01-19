@@ -1,5 +1,7 @@
+import 'package:feinterview/cubit/answer_cubit.dart';
 import 'package:feinterview/models/answer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../common/widgets/cards/answers_card.dart';
 import '../../../../../common/widgets/layouts/grid_layout.dart';
@@ -29,18 +31,22 @@ class StrollAnswersSection extends StatelessWidget {
       ),
     ];
 
-    return Padding(
-      padding: const EdgeInsets.all(StrollSizes.md),
-      child: PGridLayout(
-        itemCount: answers.length,
-        mainAxisExtent: 60,
-        spacing: StrollSizes.md - 4,
-        itemBuilder: (_, index) {
-          final answer = answers[index];
-          return StrollAnswersCard(
-            answer: answer,
-          );
-        },
+    return BlocProvider(
+      create: (context) => AnswersCubit(),
+      child: Padding(
+        padding: const EdgeInsets.all(StrollSizes.md),
+        child: PGridLayout(
+          itemCount: answers.length,
+          mainAxisExtent: 60,
+          spacing: StrollSizes.md - 4,
+          itemBuilder: (_, index) {
+            final answer = answers[index];
+            return StrollAnswersCard(
+              answer: answer,
+              isActive: true,
+            );
+          },
+        ),
       ),
     );
   }

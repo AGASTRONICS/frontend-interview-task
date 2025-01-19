@@ -8,10 +8,13 @@ import '../../../utils/constants/colors.dart';
 class StrollAnswersCard extends StatelessWidget {
   final VoidCallback? onTap;
   final StrollAnswerModel answer;
+  final bool isActive;
+
   const StrollAnswersCard({
     super.key,
     this.onTap,
     required this.answer,
+    required this.isActive,
   });
 
   @override
@@ -20,11 +23,13 @@ class StrollAnswersCard extends StatelessWidget {
       onTap: onTap ?? () {},
       child: Container(
         decoration: BoxDecoration(
-          color: StrollColors.darkShadow,
-          borderRadius: BorderRadius.all(
-            Radius.circular(StrollSizes.cardRadiusMd),
-          ),
-        ),
+            color: StrollColors.darkShadow,
+            borderRadius: BorderRadius.all(
+              Radius.circular(StrollSizes.cardRadiusMd),
+            ),
+            border: Border.all(
+              color: isActive ? StrollColors.primary : Colors.transparent,
+            )),
         child: Padding(
           padding: const EdgeInsets.all(StrollSizes.sm),
           child: Row(
@@ -32,6 +37,8 @@ class StrollAnswersCard extends StatelessWidget {
               StrollAvatar(
                 avatarPlaceholder: answer.username,
                 size: 30,
+                backgroundColor:
+                    isActive ? StrollColors.primary : Colors.transparent,
                 assetPath: '',
               ),
               SizedBox(width: StrollSizes.xs),
