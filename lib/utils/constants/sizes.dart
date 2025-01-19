@@ -16,6 +16,7 @@ class StrollSizes {
   static const double fontSizeSm = 14.0;
   static const double fontSizeMd = 16.0;
   static const double fontSizeLg = 18.0;
+  static const double fontSizeXl = 36.0;
 
   // Button sizes
   static const double buttonHeight = 18.0;
